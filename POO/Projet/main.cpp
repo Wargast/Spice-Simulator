@@ -1,7 +1,9 @@
 #include <iostream>
+#include "source.h"
 
-int main(){
+using namespace std;
 
-
-  return 0;
+int main()
+{
+	return 0;
 }
