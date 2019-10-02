@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Projet_Audrey_Luc.srcs/sources_1/new/decodeur_7sg.vhd" \
+"../../../../Projet_Audrey_Luc.srcs/sim_1/new/tb_decodeur_7sg.vhd" \
+
+# Do not sort compile order
+nosort
