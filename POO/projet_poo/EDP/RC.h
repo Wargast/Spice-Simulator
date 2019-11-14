@@ -7,9 +7,9 @@ class RC : public circuit
 public:
 	RC(float u0, float tmax, float h, float R, float C, Source* src);
 	virtual ~RC();
-	virtual float func(float Un, float t)const;
 
 private :
+virtual float func(float Un, float t);
 float m_R;
 float m_C;
 

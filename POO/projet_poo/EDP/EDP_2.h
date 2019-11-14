@@ -1,31 +1,60 @@
-// EDP_2.h: interface for the EDP_2 class.
-//
-//////////////////////////////////////////////////////////////////////
 
-#if !defined(AFX_EDP_2_H__290EFD0B_AB21_4012_9A77_DA3B51EFE44C__INCLUDED_)
-#define AFX_EDP_2_H__290EFD0B_AB21_4012_9A77_DA3B51EFE44C__INCLUDED_
-
-#if _MSC_VER > 1000
-#pragma once
-#endif // _MSC_VER > 1000
+#ifndef EDP2_H
+#define EDP2_H
 
 #include "EDP.h"
+#include <Eigen/Dense>
+#include "../source/source.h"
+
+
+using Eigen::MatrixXd;
 
 class EDP_2 : public EDP
 {
 public:
-	virtual void euler() ;
-	virtual float func(float Un, float t)const = 0;
+	virtual void euler();
+	virtual void heun();
+	virtual void RK4();
 
-	EDP_2(float u0, float tmax, float h);
+	void update_Unp(float t);
+
+	EDP_2(float u0,float u0p, float tmax, float h);
 	virtual ~EDP_2();
 
 protected:
+	virtual float func(float Un, float t) = 0;
 	float m_tmax;
 	float m_h;
-	float m_u0;
+	int m_n;
+	MatrixXd m_Un;
+
+	MatrixXd m_Unp;
 
 
 };
 
-#endif // !defined(AFX_EDP_2_H__290EFD0B_AB21_4012_9A77_DA3B51EFE44C__INCLUDED_)
+class circuit2 : public EDP_2 {
+protected:
+	Source* m_src;
+
+public:
+	void exportSrc();
+	circuit2 (float u0,float u0p, float tmax, float h,Source* src);
+	virtual ~circuit2 ();
+};
+
+class RLC : public circuit2 {
+private:
+	float m_R;
+	float m_L;
+	float m_C;
+
+public:
+	RLC (float u0,float u0p, float tmax, float h, Source* src,float R, float L, float C);
+	virtual ~RLC ();
+	virtual float func(float Un, float t);
+
+};
+
+
+#endif

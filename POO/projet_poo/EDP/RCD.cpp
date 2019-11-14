@@ -14,7 +14,7 @@ RCD::~RCD()
 }
 
 
-float RCD::func(float Un, float t)const
+float RCD::func(float Un, float t)
 {
 	float Ve = m_src->Ve(t);
 	if ( Ve > m_Vbe)

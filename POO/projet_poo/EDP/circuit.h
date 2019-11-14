@@ -12,13 +12,13 @@ using namespace std;
 class circuit : public EDP1
 {
 public:
-	virtual float func(float Un, float t)const = 0;
 	void exportSrc();
 
 	circuit(float u0, float tmax, float h, Source* src );
 	virtual ~circuit();
 
 protected:
+	virtual float func(float Un, float t) = 0;
   Source* m_src;
 
 

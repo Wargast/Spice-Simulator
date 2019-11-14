@@ -18,7 +18,7 @@ exemple1::~exemple1()
 
 }
 
-float exemple1::func(float Un, float t)const
+float exemple1::func(float Un, float t)
 {
 	return -3*Un-3*t;
 }

@@ -9,7 +9,7 @@ public:
 	//meow
 	exemple1(float u0, float t_max, float h);
 	virtual ~exemple1();
-	virtual float func(float Un, float t)const;
+	virtual float func(float Un, float t);
 	// meow
 
 

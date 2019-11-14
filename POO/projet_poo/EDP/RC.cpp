@@ -16,7 +16,7 @@ RC::~RC()
 
 }
 
-float RC::func(float Un, float t)const
+float RC::func(float Un, float t)
 {
 	return (m_src->Ve(t) - Un)/m_R/m_C;
 }
