@@ -5,10 +5,6 @@
 #if !defined(AFX_RECTANG_H__5C3D4D28_D665_4D4A_B8D3_D4D389969BA7__INCLUDED_)
 #define AFX_RECTANG_H__5C3D4D28_D665_4D4A_B8D3_D4D389969BA7__INCLUDED_
 
-#if _MSC_VER > 1000
-#pragma once
-#endif // _MSC_VER > 1000
-
 #include "periodique.h"
 
 class rectang  : public periodique

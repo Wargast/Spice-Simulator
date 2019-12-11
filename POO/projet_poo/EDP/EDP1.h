@@ -4,10 +4,12 @@
 
 #include "EDP.h"
 
+using Eigen::MatrixXd;
+
 class EDP1 : public EDP
 {
 public:
-	virtual void euler() ;
+	// virtual void euler() ;
 	virtual void heun();
 	virtual void RK4();
 
@@ -16,11 +18,7 @@ public:
 
 protected:
 	virtual float func(float Un, float t) = 0;
-	float m_tmax;
-	float m_h;
-	float m_u0;
-	int m_n;
-
+	virtual void update_Unp(float t);
 
 };
 

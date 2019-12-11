@@ -7,4 +7,5 @@
 #include "EDP/RCD.h"
 #include "EDP/exemple1.h"
 #include "EDP/exemple2.h"
-// #include "EDP/EDP_2.h"
+#include "EDP/RLC.h"
+#include "EDP/RLCparallel.h"

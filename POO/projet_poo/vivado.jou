@@ -1,0 +1,129 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Dec  9 14:06:17 2019
+# Process ID: 4095
+# Current directory: /home/wargast/Documents/N7/Projet_2A/POO/projet_poo
+# Command line: vivado
+# Log file: /home/wargast/Documents/N7/Projet_2A/POO/projet_poo/vivado.log
+# Journal file: /home/wargast/Documents/N7/Projet_2A/POO/projet_poo/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/wargast/Documents/N7/projet_num/projet_num.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config /home/wargast/Documents/N7/projet_num/tb_module_affichage_behav.wcfg
+source tb_module_affichage.tcl
+run 5 ms
+file mkdir /home/wargast/Documents/N7/projet_num/projet_num.srcs/sources_1/new
+close [ open /home/wargast/Documents/N7/projet_num/projet_num.srcs/sources_1/new/Decodeur_BCD.vhd w ]
+add_files /home/wargast/Documents/N7/projet_num/projet_num.srcs/sources_1/new/Decodeur_BCD.vhd
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/wargast/Documents/N7/projet_num/projet_num.srcs/sim_1/new/tb_Decodeur_BCD.vhd w ]
+add_files -fileset sim_1 /home/wargast/Documents/N7/projet_num/projet_num.srcs/sim_1/new/tb_Decodeur_BCD.vhd
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_Decodeur_BCD [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Decodeur_BCD [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+launch_simulation
+update_compile_order -fileset sim_1
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config /home/wargast/Documents/N7/projet_num/tb_module_affichage_behav.wcfg
+source tb_Decodeur_BCD.tcl
+current_wave_config {}
+add_wave {{/tb_Decodeur_BCD/iut}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {/home/wargast/Documents/N7/projet_num/tb_module_affichage_behav.wcfg}
+close [ open /home/wargast/Documents/N7/projet_num/projet_num.srcs/sources_1/new/Tx.vhd w ]
+add_files /home/wargast/Documents/N7/projet_num/projet_num.srcs/sources_1/new/Tx.vhd
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/wargast/Documents/N7/projet_num/projet_num.srcs/sim_1/new/tb_Tx.vhd w ]
+add_files -fileset sim_1 /home/wargast/Documents/N7/projet_num/projet_num.srcs/sim_1/new/tb_Tx.vhd
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Tx [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_Tx [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+open_wave_config /home/wargast/Documents/N7/projet_num/tb_module_affichage_behav.wcfg
+source tb_Tx.tcl
+current_wave_config {tb_module_affichage_behav.wcfg}
+add_wave {{/tb_Tx}} 
+current_wave_config {tb_module_affichage_behav.wcfg}
+add_wave {{/tb_Tx/iut/state}} 
+current_wave_config {tb_module_affichage_behav.wcfg}
+add_wave {{/tb_Tx/iut/compt_bit}} 
+current_wave_config {tb_module_affichage_behav.wcfg}
+add_wave {{/tb_Tx/iut/en_timer}} 
+current_wave_config {tb_module_affichage_behav.wcfg}
+add_wave {{/tb_Tx/iut}} 
+relaunch_sim
+run 3 ms
+relaunch_sim
+relaunch_sim
+run 3 ms
+relaunch_sim
+run 3 ms
+run 3 ms
+relaunch_sim
+run 3 ms
+relaunch_sim
+run 3 ms
+relaunch_sim
+run 3 ms
+relaunch_sim
+run 3 ms
+relaunch_sim
+run 3 ms
+relaunch_sim
+run 3 ms
+run 1 ms
+run 4 ms
+run 4 ms
+run 4 ms
+run 4 ms
+run 4 ms
+run 4 ms
+run 4 ms
+run 4 ms
+relaunch_sim
+run 4 ms
+relaunch_sim
+run 2 ms
+relaunch_sim
+run 2 ms
+save_wave_config {/home/wargast/Documents/N7/projet_num/tb_module_affichage_behav.wcfg}
+close_sim
+current_sim simulation_2
+close_sim
+close_sim

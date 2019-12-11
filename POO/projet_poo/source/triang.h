@@ -5,10 +5,6 @@
 #if !defined(AFX_TRIANG_H__98C64AF3_EE38_49E5_B623_07BE44FE1411__INCLUDED_)
 #define AFX_TRIANG_H__98C64AF3_EE38_49E5_B623_07BE44FE1411__INCLUDED_
 
-#if _MSC_VER > 1000
-#pragma once
-#endif // _MSC_VER > 1000
-
 #include "periodique.h"
 
 class triang  : public periodique

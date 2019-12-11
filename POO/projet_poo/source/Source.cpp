@@ -10,11 +10,9 @@
 
 Source::Source(float V0, float phi):m_V0(V0), m_phi(phi)
 {
-
 }
 
 
 Source::~Source()
 {
-
 }

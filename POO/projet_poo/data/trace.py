@@ -26,27 +26,43 @@ def readData(filename):
     return data
 
 
-file = "euler.txt"
-data = readData(file)
+print("Choose data to trace : \n[1] Euler \n[2] Heun \n[3] RK4 \n[4] Les 3")
+choix = input()
 
-x = data[:,0]
-y = data[:,1]
-plt.plot(x,y)
+if choix==1 or choix==4:
+    file = "euler.txt"
+    data = readData(file)
+    x = data[:,0]
+    y = data[:,1]
+    plt.plot(x,y,'b')
+
+if choix==2 or choix==4:
+    file = "heun.txt"
+    data = readData(file)
+    x = data[:,0]
+    y = data[:,1]
+    plt.plot(x,y,'g')
+
+if choix==3 or choix==4:
+    file = "RK4.txt"
+    data = readData(file)
+    x = data[:,0]
+    y = data[:,1]
+    plt.plot(x,y,'black')
 
 src = readData("src.txt")
+x_src = src[:,0]
 y_src = src[:,1]
-print len(x)
-plt.plot(x,y_src)
+plt.plot(x_src,y_src,'r')
 
-alpha = 0
-# fexacte = (alpha-1.0/3)*np.exp(-3*x)-x+1.0/3;
+# alpha = 0
+# # fexacte = (alpha-1.0/3)*np.exp(-3*x)-x+1.0/3;
+#
+# r_lambda = math.sqrt(1)
+# v0 = 0
+# u0 = 1
+# fexacte = v0 / r_lambda * np.sin(r_lambda*x) + u0*np.cos(r_lambda * x);
+# # plt.plot(x,fexacte,'r')
 
-r_lambda = math.sqrt(1)
-v0 = 0
-u0 = 1
-print math.sin(0.1)
-fexacte = v0 / r_lambda * np.sin(r_lambda*x) + u0*np.cos(r_lambda * x);
-# plt.plot(x,fexacte,'r')
-
-
+plt.grid()
 plt.show()
