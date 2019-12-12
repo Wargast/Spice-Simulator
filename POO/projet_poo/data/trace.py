@@ -29,40 +29,43 @@ def readData(filename):
 print("Choose data to trace : \n[1] Euler \n[2] Heun \n[3] RK4 \n[4] Les 3")
 choix = input()
 
+fig = plt.figure()
+ax = plt.subplot(111)
+
+
 if choix==1 or choix==4:
     file = "euler.txt"
     data = readData(file)
     x = data[:,0]
     y = data[:,1]
-    plt.plot(x,y,'b')
+    ax.plot(x,y,'b', label="Euler")
 
 if choix==2 or choix==4:
     file = "heun.txt"
     data = readData(file)
     x = data[:,0]
     y = data[:,1]
-    plt.plot(x,y,'g')
+    ax.plot(x,y,'g', label="Heun")
 
 if choix==3 or choix==4:
     file = "RK4.txt"
     data = readData(file)
     x = data[:,0]
     y = data[:,1]
-    plt.plot(x,y,'black')
+    ax.plot(x,y,'black', label="RK4")
+
+
+
+
+
+
 
 src = readData("src.txt")
 x_src = src[:,0]
 y_src = src[:,1]
-plt.plot(x_src,y_src,'r')
+ax.plot(x_src,y_src,'r', label="Source")
 
-# alpha = 0
-# # fexacte = (alpha-1.0/3)*np.exp(-3*x)-x+1.0/3;
-#
-# r_lambda = math.sqrt(1)
-# v0 = 0
-# u0 = 1
-# fexacte = v0 / r_lambda * np.sin(r_lambda*x) + u0*np.cos(r_lambda * x);
-# # plt.plot(x,fexacte,'r')
 
-plt.grid()
+ax.grid()
+ax.legend()
 plt.show()

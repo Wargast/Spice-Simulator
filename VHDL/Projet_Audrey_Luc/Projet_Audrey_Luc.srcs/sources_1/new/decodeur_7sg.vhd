@@ -1,21 +1,21 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
+-- Company:
+-- Engineer:
+--
 -- Create Date: 02.10.2019 16:32:01
--- Design Name: 
+-- Design Name:
 -- Module Name: decodeur_7sg - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
+-- Project Name:
+-- Target Devices:
+-- Tool Versions:
+-- Description:
+--
+-- Dependencies:
+--
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
+--
 ----------------------------------------------------------------------------------
 
 
@@ -66,7 +66,7 @@ elsif data = "0110" then
     s_reponse <= "0100000";
 elsif data="0111" then
     s_reponse <= "0001111";
-elsif data="1000" then 
+elsif data="1000" then
     s_reponse <= "0000000";
 elsif data="1001" then
     s_reponse <= "0000100";
@@ -74,6 +74,7 @@ elsif data="1001" then
     s_reponse <= "1111111";
 end if;
 end process;
+
 dpo <= dpi;
 a <= s_reponse(6);
 b <= s_reponse(5);

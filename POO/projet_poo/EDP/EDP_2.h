@@ -22,11 +22,6 @@ public:
 protected:
 	virtual void update_Unp(float t);
 	virtual float func(float Un, float t) = 0;
-	// float m_tmax;
-	// float m_h;
-	// int m_n;
-	// MatrixXd m_Un;
-	// MatrixXd m_Unp;
 
 };
 
