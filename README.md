@@ -15,17 +15,17 @@ Ce programme utilise la bibliothèque Eigen. Si vous vouler modifier ou recompil
 ###   Sous linux 
 #### Utilisation
 
-Ouvrez un terminal dans le dossier et lancer l'executable "launcher". 
+Ouvrez un terminal dans le dossier et lancer l'executable `launcher`. 
 ```shell
 ./launcher
 ```
 Suivez les instructions puis terminer la simulation.
-Pour tracez les résultats, vous pouvez utiliser le scipt python nommé "trace.py" 
+Pour tracez les résultats, vous pouvez utiliser le scipt python nommé `trace.py` 
 ```shell
 python trace.py
 ```
 #### Compilation
-Pour compiler, aucun fichier Makefile n'a encpore été fait. Utiliser la commande suivante ou le script bash "complile.sh" pour le faire. attention s'il des fichiers sources sont ajouter il faudra aussi les rajouter en argument de la commande.
+Pour compiler, aucun fichier Makefile n'a encpore été fait. Utiliser la commande suivante ou le script bash `complile.sh` pour le faire. attention s'il des fichiers sources sont ajouter il faudra aussi les rajouter en argument de la commande.
 ```shell
 g++ -o launcher  main2.cpp source/Source.cpp  source/aperiodique.cpp source/periodique.cpp source/creneau.cpp source/echelon.cpp source/rectang.cpp source/sinus.cpp source/triang.cpp EDP/EDP.cpp EDP/EDP1.cpp EDP/exemple1.cpp EDP/circuit.cpp EDP/RC.cpp EDP/RCD.cpp EDP/EDP_2.cpp EDP/exemple2.cpp EDP/circuit2.cpp EDP/RLC.cpp EDP/RLCparallel.cpp
 ````
@@ -37,11 +37,11 @@ ou
 
 ###   Sous Windows
 #### Utilisation
-Il suffit de lancer l'executable nommé "laucher.txt". Cela derait ouvrir un terminal et lancez le programme.
-Pour tracer vos résultats, vous pouvez utiliser le script python. Un fichier Batch a été créé pour faciliter la tache.  
+Il suffit de lancer l'executable nommé `laucher.exe`. Cela derait ouvrir un terminal et lancez le programme.
+Pour tracer vos résultats, vous pouvez utiliser le script python. Un fichier Batch `trace.bat` a été créé pour faciliter la tache.  
 
 #### Compilation 
-Pour facilité la compilation (et comme aucun fichier Makefile n'a encore été fait) un fichier Batch contient la commande à lancer. Sinon lancez dans un cmd.exe ou dans un PowerShell :
+Pour facilité la compilation (et comme aucun fichier Makefile n'a encore été fait) le fichier Batch `compile.bat` contient la commande à lancer. Sinon lancez dans un cmd.exe ou dans un PowerShell :
 
 ```shell
 g++ -o launcher  main2.cpp source/Source.cpp  source/aperiodique.cpp source/periodique.cpp source/creneau.cpp source/echelon.cpp source/rectang.cpp source/sinus.cpp source/triang.cpp EDP/EDP.cpp EDP/EDP1.cpp EDP/exemple1.cpp EDP/circuit.cpp EDP/RC.cpp EDP/RCD.cpp EDP/EDP_2.cpp EDP/exemple2.cpp EDP/circuit2.cpp EDP/RLC.cpp EDP/RLCparallel.cpp
