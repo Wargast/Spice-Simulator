@@ -9,7 +9,7 @@ Ce projet consiste à simuler différents circuits électriques à l'aide de plu
 
 Pour cela, plusieurs sources sont disponibles (Sinusoïde, échelon, carrée, triangulaire).
 
-Ce programme utilise la bibliothèque Eigen. Si vous vouler modifier ou recompiler le programme, il vous faudra le spécifier au compilateur. La bibliothèque est fournie dans le repositorie, il suffit de copier ce dossier dans le répertoire dédier du compilateur. Sinon, les sriptes de compilation fournis sont préconfigurer pour utiliser cette bibliothèque.
+Ce programme utilise la bibliothèque Eigen. Si vous vouler modifier ou recompiler le programme, il vous faudra le spécifier au compilateur. La bibliothèque est fournie dans le repositorie, il suffit de copier ce dossier dans le répertoire dédier du compilateur. Sinon, les sriptes de compilation fournis sont préconfigurés pour utiliser cette bibliothèque.
 
 Le site officiel de Eigen : <http://eigen.tuxfamily.org/index.php?title=Main_Page>.
 
