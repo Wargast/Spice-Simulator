@@ -34,21 +34,21 @@ ax = plt.subplot(111)
 
 
 if choix==1 or choix==4:
-    file = "euler.txt"
+    file = "data/euler.txt"
     data = readData(file)
     x = data[:,0]
     y = data[:,1]
     ax.plot(x,y,'b', label="Euler")
 
 if choix==2 or choix==4:
-    file = "heun.txt"
+    file = "data/heun.txt"
     data = readData(file)
     x = data[:,0]
     y = data[:,1]
     ax.plot(x,y,'g', label="Heun")
 
 if choix==3 or choix==4:
-    file = "RK4.txt"
+    file = "data/RK4.txt"
     data = readData(file)
     x = data[:,0]
     y = data[:,1]
@@ -60,7 +60,7 @@ if choix==3 or choix==4:
 
 
 
-src = readData("src.txt")
+src = readData("data/src.txt")
 x_src = src[:,0]
 y_src = src[:,1]
 ax.plot(x_src,y_src,'r', label="Source")
