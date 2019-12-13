@@ -11,6 +11,7 @@ void print_lunching(string);
 
 int main()
 {
+	system("chcp 65001");
 	bool run = true;
 	int state = 0; // etat de la machine d'etat
 	int circuit_num, source_num, method_num = 0; //stockage des choix de l'utilisateur

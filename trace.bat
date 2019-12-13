@@ -1,0 +1,1 @@
+python %cd%/data/trace.py
