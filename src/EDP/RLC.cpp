@@ -14,9 +14,9 @@ RLC::~RLC(){}
 
 float RLC::func(float Un, float t)
 {
-  return (-m_R/m_L * m_Un(0,0) +(m_src->Ve(t) - Un )/m_L/m_C   );
+  return (-m_R/m_L * m_Un(1,0) +(m_src->Ve(t) - m_Un(0,0) )/m_L/m_C   );
 }
 float RLC::func2(float Un, float Unp, float t)
 {
-  return (-m_R/m_L * Un +(m_src->Ve(t) - Un )/m_L/m_C   );
+  return (-m_R/m_L * Unp +(m_src->Ve(t) - Un )/m_L/m_C   );
 }

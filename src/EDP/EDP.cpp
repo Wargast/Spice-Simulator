@@ -13,6 +13,7 @@ using namespace std;
 
 EDP::EDP(float u0, float tmax, float h):m_tmax(tmax), m_h(h), m_u0(u0)
 {
+	m_n = m_tmax/m_h;
 }
 
 EDP::~EDP()

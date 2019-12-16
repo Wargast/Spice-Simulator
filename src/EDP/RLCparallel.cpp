@@ -21,5 +21,5 @@ float RLCparallel::func(float Un, float t)
 float RLCparallel::func2(float Un, float Unp, float t)
 {
   float Vcp = (m_src->Ve(t+m_h) - m_src->Ve(t))/m_h;
-  return ( (Vcp - m_Un(1,0))/(m_R*m_C) - (m_Un(0,0)/(m_L*m_C)) );
+  return ( (Vcp - Unp)/(m_R*m_C) - (Un/(m_L*m_C)) );
 }

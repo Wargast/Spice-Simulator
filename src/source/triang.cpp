@@ -21,19 +21,20 @@ triang::~triang()
 
 float triang::Ve(float t)const
 {
-	if( t<0)
+	float t2 = t-m_phi;
+	if( t2<0)
 	{
 		return 0;
 	}
-	
-	else if (m_phi <= fmod(t,m_periode) && fmod(t,m_periode) <= m_periode/2 + m_phi )
+
+	else if (fmod(t2,m_periode) >= 0 && (fmod(t2,m_periode) <= m_periode/2) )
 	{
-		return 2*m_V0/m_periode*(fmod(t,m_periode)+m_phi);
+		return 2*m_V0/m_periode*(fmod(t2,m_periode));
 	}
-	
+
 	else
 	{
-		return -2*m_V0/m_periode*(fmod(t,m_periode)+m_phi)+2*m_V0;
+		return -2*m_V0/m_periode*(fmod(t2,m_periode))+2*m_V0;
 	}
 
 }
