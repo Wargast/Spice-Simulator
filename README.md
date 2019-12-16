@@ -29,7 +29,7 @@ python trace.py
 #### Compilation
 Pour compiler, aucun fichier Makefile n'a encpore été fait. Utiliser la commande suivante ou le script bash `complile.sh` pour le faire. attention s'il des fichiers sources sont ajouter il faudra aussi les rajouter en argument de la commande.
 ```shell
-g++ -o launcher  main2.cpp source/Source.cpp  source/aperiodique.cpp source/periodique.cpp source/creneau.cpp source/echelon.cpp source/rectang.cpp source/sinus.cpp source/triang.cpp EDP/EDP.cpp EDP/EDP1.cpp EDP/exemple1.cpp EDP/circuit.cpp EDP/RC.cpp EDP/RCD.cpp EDP/EDP_2.cpp EDP/exemple2.cpp EDP/circuit2.cpp EDP/RLC.cpp EDP/RLCparallel.cpp
+g++ -I ./ -o launcher  src/main2.cpp src/source/Source.cpp  src/source/aperiodique.cpp src/source/periodique.cpp src/source/creneau.cpp src/source/echelon.cpp src/source/rectang.cpp src/source/sinus.cpp src/source/triang.cpp src/EDP/EDP.cpp src/EDP/EDP1.cpp src/EDP/exemple1.cpp src/EDP/circuit.cpp src/EDP/RC.cpp src/EDP/RCD.cpp src/EDP/EDP_2.cpp src/EDP/exemple2.cpp src/EDP/circuit2.cpp src/EDP/RLC.cpp src/EDP/RLCparallel.cpp
 ````
 ou
 ``` shell
@@ -46,5 +46,5 @@ Pour tracer vos résultats, vous pouvez utiliser le script python. Un fichier Ba
 Pour facilité la compilation (et comme aucun fichier Makefile n'a encore été fait) le fichier Batch `compile.bat` contient la commande à lancer. Sinon lancez dans un cmd.exe ou dans un PowerShell :
 
 ```shell
-g++ -o launcher  main2.cpp source/Source.cpp  source/aperiodique.cpp source/periodique.cpp source/creneau.cpp source/echelon.cpp source/rectang.cpp source/sinus.cpp source/triang.cpp EDP/EDP.cpp EDP/EDP1.cpp EDP/exemple1.cpp EDP/circuit.cpp EDP/RC.cpp EDP/RCD.cpp EDP/EDP_2.cpp EDP/exemple2.cpp EDP/circuit2.cpp EDP/RLC.cpp EDP/RLCparallel.cpp
+g++ -I %cd% -o launcher.exe    src/main2.cpp src/source/Source.cpp  src/source/aperiodique.cpp src/source/periodique.cpp src/source/creneau.cpp src/source/echelon.cpp src/source/rectang.cpp src/source/sinus.cpp src/source/triang.cpp src/EDP/EDP.cpp src/EDP/EDP1.cpp src/EDP/exemple1.cpp src/EDP/circuit.cpp src/EDP/RC.cpp src/EDP/RCD.cpp src/EDP/EDP_2.cpp src/EDP/exemple2.cpp src/EDP/circuit2.cpp src/EDP/RLC.cpp  src/EDP/RLCparallel.cpp
 ```
